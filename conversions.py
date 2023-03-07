@@ -12,6 +12,8 @@ def convertCelsiusToKelvin(celsius):
 
 
 def convertCelsiusToFahrenheit(celsius):
+    '''Takes in a float representing a Celsius measurement,
+    and returns that temperature converted into Fahrenheit'''
     if not isinstance(celsius, float):
         if not isinstance(celsius, int):
             raise InvalidInputError("input must be a number.")
@@ -19,6 +21,8 @@ def convertCelsiusToFahrenheit(celsius):
     return fahrenheit
 
 def convertFahrenheitToCelsius(fahrenheit):
+    '''Takes in a float representing a Fahrenheit measurement,
+    and returns that temperature converted into Celsius'''
     if not isinstance(fahrenheit, float):
         if not isinstance(fahrenheit, int):
             raise InvalidInputError("input must be a number.")
@@ -26,6 +30,8 @@ def convertFahrenheitToCelsius(fahrenheit):
     return celsius
 
 def convertFahrenheitToKelvin(fahrenheit):
+    '''Takes in a float representing a Fahrenheit measurement,
+    and returns that temperature converted into Kelvins'''
     if not isinstance(fahrenheit, float):
         if not isinstance(fahrenheit, int):
             raise InvalidInputError("input must be a number.")
@@ -33,6 +39,8 @@ def convertFahrenheitToKelvin(fahrenheit):
     return kelvin
 
 def convertKelvinToCelsius(kelvin):
+    '''Takes in a float representing a Kelvin measurement,
+    and returns that temperature converted into Celsius'''
     if not isinstance(kelvin, float):
         if not isinstance(kelvin, int):
             raise InvalidInputError("input must be a number.")
@@ -40,6 +48,8 @@ def convertKelvinToCelsius(kelvin):
     return celsius
 
 def convertKelvinToFahrenheit(kelvin):
+    '''Takes in a float representing a Kelvin measurement,
+    and returns that temperature converted into Fahrenheit'''
     if not isinstance(kelvin, float):
         if not isinstance(kelvin, int):
             raise InvalidInputError("input must be a number.")
