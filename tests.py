@@ -11,8 +11,8 @@ class KnownValues(unittest.TestCase):
                        [500, 932.0, 773.15]
                        ]
     '''distanceConversion = [Miles, Yards, Meters]'''
-    distanceConversion = [[0.05, 88, 80.47],
-                          [0.25, 440, 402.34],
+    distanceConversion = [[0.00056818, 1.0, 0.9144],
+                          [0.00062137, 1.093613, 1.0],
                           [0.5, 880.0, 804.67],
                           [1.0, 1760.0, 1609.34],
                           [10.0, 17600.0, 16093.44]
@@ -59,62 +59,62 @@ class KnownValues(unittest.TestCase):
         '''the convert function should give known result with known input'''
         for celsius, fahrenheit, kelvin in self.conversionTable:
             result = conversions_refactored.convert("Celsius", "Kelvin", celsius)
-            self.assertEqual(kelvin, result)
+            self.assertAlmostEqual(kelvin, result, places=2)
     def test_refactoredCelsiusToFahrenheit(self):
         '''the convert function should give known result with known input'''
         for celsius, fahrenheit, kelvin in self.conversionTable:
             result = conversions_refactored.convert("Celsius", "Fahrenheit", celsius)
-            self.assertEqual(fahrenheit, result)
+            self.assertAlmostEqual(fahrenheit, result, places=2)
     def test_refactoredFahrenheitToCelsius(self):
         '''the convert function should give known result with known input'''
         for celsius, fahrenheit, kelvin in self.conversionTable:
             result = conversions_refactored.convert("Fahrenheit", "Celsius", fahrenheit)
-            self.assertEqual(celsius, result)
+            self.assertAlmostEqual(celsius, result, places=2)
     def test_refactoredFahrenheitToKelvin(self):
         '''the convert function should give known result with known input'''
         for celsius, fahrenheit, kelvin in self.conversionTable:
             result = conversions_refactored.convert("Fahrenheit", "Kelvin", fahrenheit)
-            self.assertEqual(kelvin, result)
+            self.assertAlmostEqual(kelvin, result, places=2)
     def test_refactoredKelvinToCelsius(self):
         '''the convert function should give known result with known input'''
         for celsius, fahrenheit, kelvin in self.conversionTable:
             result = conversions_refactored.convert("Kelvin", "Celsius", kelvin)
-            self.assertEqual(celsius, result)
+            self.assertAlmostEqual(celsius, result, places = 2)
     def test_refactoredKelvinToFahrenheit(self):
         '''the convert function should give known result with known input'''
         for celsius, fahrenheit, kelvin in self.conversionTable:
             result = conversions_refactored.convert("Kelvin", "Fahrenheit", kelvin)
-            self.assertEqual(fahrenheit, result)
+            self.assertAlmostEqual(fahrenheit, result, places=2)
     def test_refactoredMilesToYards(self):
         '''the convert function should give known result with known input'''
         for miles, yards, meters in self.distanceConversion:
             result = conversions_refactored.convert("Miles", "Yards", miles)
-            self.assertEqual(yards, result)
+            self.assertAlmostEqual(yards, result, places=2)
     def test_refactoredMilesToMeters(self):
         '''the convert function should give known result with known input'''
         for miles, yards, meters in self.distanceConversion:
             result = conversions_refactored.convert("Miles", "Meters", miles)
-            self.assertEqual(meters, result)
+            self.assertAlmostEqual(meters, result, places=2)
     def test_refactoredYardsToMiles(self):
         '''the convert function should give known result with known input'''
         for miles, yards, meters in self.distanceConversion:
             result = conversions_refactored.convert("Yards", "Miles", yards)
-            self.assertEqual(miles, result)
+            self.assertAlmostEqual(miles, result, places=2)
     def test_refactoredYardsToMeters(self):
         '''the convert function should give known result with known input'''
         for miles, yards, meters in self.distanceConversion:
             result = conversions_refactored.convert("Yards", "Meters", yards)
-            self.assertEqual(meters, result)
+            self.assertAlmostEqual(meters, result, places=2)
     def test_refactoredMetersToMiles(self):
         '''the convert function should give known result with known input'''
         for miles, yards, meters in self.distanceConversion:
             result = conversions_refactored.convert("Meters", "Miles", meters)
-            self.assertEqual(miles, result)
+            self.assertAlmostEqual(miles, result, places=2)
     def test_refactoredMetersToYards(self):
         '''the convert function should give known result with known input'''
         for miles, yards, meters in self.distanceConversion:
             result = conversions_refactored.convert("Meters", "Yards", meters)
-            self.assertEqual(yards, result)
+            self.assertAlmostEqual(yards, result, places=2)
 
 #Test converting a unit to itself:
     def test_sameInputCelsius(self):

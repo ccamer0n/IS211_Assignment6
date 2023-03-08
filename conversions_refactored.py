@@ -21,6 +21,5 @@ def convert(fromUnit, toUnit, value):
     elif formulas.get((fromUnit.capitalize(), toUnit.capitalize())) == None:
         raise ConversionNotPossible(f"Cannot convert {fromUnit} to {toUnit}")
     else:
-        result = round(formulas.get((fromUnit.capitalize(), toUnit.capitalize())), 2)
+        result = formulas.get((fromUnit.capitalize(), toUnit.capitalize()))
         return result
-
